@@ -1,15 +1,38 @@
-import { Sidebar, SidebarProps, SidebarRail } from '@/ui/primitives/sidebar'
-import DashboardSidebarHeader from './header'
-import DashboardSidebarFooter from './footer'
-import DashboardSidebarContent from './content'
+import ExternalIcon from '@/ui/external-icon'
+import {
+  SidebarFooter,
+  SidebarMenu,
+  SidebarMenuButton,
+  SidebarMenuItem,
+} from '@/ui/primitives/sidebar'
+import { Book, Github } from 'lucide-react' // Mengimpor ikon yang diperlukan
+import Link from 'next/link'
+import TeamBlockageAlert from './blocked-banner'
 
-export default function DashboardSidebar({ ...props }: SidebarProps) {
+export default function DashboardSidebarFooter() {
   return (
-    <Sidebar collapsible="icon" {...props}>
-      <DashboardSidebarHeader />
-      <DashboardSidebarContent />
-      <DashboardSidebarFooter />
-      <SidebarRail />
-    </Sidebar>
+    <SidebarFooter>
+     <SidebarMenu>
+       <TeamBlockageAlert className="mb-2" />
+       <SidebarMenuItem key="github">
+         <SidebarMenuButton asChild tooltip="GitHub">
+           <Link href="https://github.com/" target="_blank" rel="noopener noreferrer">
+             <Github className="text-fg-500 size-4" />
+             GitHub
+             <ExternalIcon className="ml-auto size-4" />
+           </Link>
+         </SidebarMenuButton>
+       </SidebarMenuItem>
+       <SidebarMenuItem key="docs">
+         <SidebarMenuButton asChild tooltip="Documentation">
+           <Link href="https://docs.neosantara.xyz" target="_blank" rel="noopener noreferrer">
+             <Book className="text-fg-500 size-4" />
+             Documentation
+             <ExternalIcon className="ml-auto size-4" />
+           </Link>
+         </SidebarMenuButton>
+       </SidebarMenuItem>
+     </SidebarMenu>
+   </SidebarFooter>
   )
 }

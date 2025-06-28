@@ -7,17 +7,20 @@ import { Metadata } from 'next/types'
 import { METADATA } from '@/configs/metadata'
 import ClientProviders from '@/features/client-providers'
 import { Suspense } from 'react'
-import { GeneralAnalyticsCollector } from '@/features/general-analytics-collector'
+// Hapus GeneralAnalyticsCollector jika tidak digunakan
+// import { GeneralAnalyticsCollector } from '@/features/general-analytics-collector'
 import { Toaster } from '@/ui/primitives/toaster'
 import Head from 'next/head'
-import { GTMHead } from '@/features/google-tag-manager'
-import { Analytics } from '@vercel/analytics/next'
+// Hapus GTMHead jika tidak menggunakan Google Tag Manager
+// import { GTMHead } from '@/features/google-tag-manager'
+// Hapus Analytics jika tidak menggunakan Vercel Analytics
+// import { Analytics } from '@vercel/analytics/next'
 import { ALLOW_SEO_INDEXING } from '@/configs/flags'
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    template: '%s - E2B',
+    template: '%s - Neosantara AI', // Mengubah judul template
     default: METADATA.title,
   },
   description: METADATA.description,
@@ -39,19 +42,24 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <Head>
-        <GTMHead />
-      </Head>
-      <Body>
-        <ClientProviders>
-          {children}
-          <Suspense>
-            <GeneralAnalyticsCollector />
-            <Toaster />
-          </Suspense>
-        </ClientProviders>
-        <Analytics />
-      </Body>
-    </html>
+     <Head>
+       {/* Hapus GTMHead jika tidak digunakan */}
+       {/* <GTMHead /> */}
+     </Head>
+     <Body>
+       <ClientProviders>
+         {children}
+         <Suspense>
+           {/* Hapus GeneralAnalyticsCollector jika tidak digunakan */}
+           {/* <GeneralAnalyticsCollector /> */}
+           {/* Hapus DashboardSurveyPopover jika tidak digunakan */}
+           {/* <DashboardSurveyPopover /> */}
+           <Toaster />
+         </Suspense>
+       </ClientProviders>
+       {/* Hapus Analytics jika tidak digunakan */}
+       {/* <Analytics /> */}
+     </Body>
+   </html>
   )
 }

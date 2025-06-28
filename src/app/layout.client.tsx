@@ -1,6 +1,6 @@
 'use client'
 
-import { GTMBody } from '@/features/google-tag-manager'
+// import { GTMBody } from '@/features/google-tag-manager'
 import { cn } from '@/lib/utils'
 import { useParams } from 'next/navigation'
 import Script from 'next/script'
@@ -10,17 +10,19 @@ export function Body({
   children,
 }: {
   children: ReactNode
-}): React.ReactElement<unknown> {
+}): React.ReactElement < unknown > {
   const mode = useMode()
-
+  
   return (
     <body className={cn(mode, 'relative flex min-h-[100svh] flex-col')}>
-      {process.env.NEXT_PUBLIC_SCAN && process.env.NEXT_PUBLIC_SCAN === '1' && (
-        <Script src="https://unpkg.com/react-scan/dist/auto.global.js" async />
-      )}
-      <GTMBody />
-      {children}
-    </body>
+     {/* Hapus Script ini jika NEXT_PUBLIC_SCAN tidak digunakan */}
+     {process.env.NEXT_PUBLIC_SCAN && process.env.NEXT_PUBLIC_SCAN === '1' && (
+       <Script src="https://unpkg.com/react-scan/dist/auto.global.js" async />
+     )}
+     {/* Hapus GTMBody jika tidak digunakan */}
+     {/* <GTMBody /> */}
+     {children}
+   </body>
   )
 }
 
