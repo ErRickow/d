@@ -1,18 +1,4 @@
-Edit dengan apl Dokumen
-Membuat penyesuaian, memberi komentar, dan berbagi dengan yang lain agar dapat mengedit secara bersamaan.
-LAIN KALIGUNAKAN APLIKASI
 
-oke silahkan tulis full perubahannya ke format .i...
-
-Panduan Modifikasi Frontend Dashboard Neosantara AI
-Dokumen ini berisi panduan komprehensif untuk memodifikasi frontend dashboard Anda agar sesuai dengan backend Neosantara AI yang telah Anda sediakan. Karena dashboard Anda dibangun dengan Next.js (React/TypeScript), dan Jupyter Notebook (serta Google Colab) pada dasarnya adalah lingkungan untuk Python dan analisis data, Anda tidak dapat menjalankan kode frontend ini langsung di dalam notebook ini.
-
-Notebook ini berfungsi sebagai dokumen instruksi dan referensi kode. Anda perlu:
-
-Membuka repositori frontend dashboard Anda secara lokal (di komputer Anda, bukan di Google Colab).
-Menyalin dan menempelkan perubahan kode yang disediakan di bawah ini ke file-file yang sesuai di repositori lokal Anda.
-Menjalankan aplikasi Next.js secara lokal setelah semua perubahan diterapkan.
-Menggunakan Git secara lokal untuk mendorong perubahan ke GitHub Anda. Integrasi GitHub di Google Colab terutama ditujukan untuk notebook Python.
 1. Persiapan Lingkungan dan Variabel
 Pastikan Anda memiliki file .env.local di root repositori frontend Anda (atau sistem variabel lingkungan yang setara) dengan konfigurasi berikut. Ubah nilai placeholder (YOUR_...) dengan nilai aktual Anda.
 
