@@ -1,3 +1,4 @@
+import { Suspense } from 'react'
 import { getTeam } from '@/server/team/get-team'
 import { AlertDialog } from '@/ui/alert-dialog'
 import ErrorBoundary from '@/ui/error'
