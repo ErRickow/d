@@ -10,7 +10,8 @@ import { Suspense } from 'react'
 // Hapus GeneralAnalyticsCollector jika tidak digunakan
 // import { GeneralAnalyticsCollector } from '@/features/general-analytics-collector'
 import { Toaster } from '@/ui/primitives/toaster'
-import Head from 'next/head'
+// Hapus import Head dari 'next/head'
+// import Head from 'next/head' 
 // Hapus GTMHead jika tidak menggunakan Google Tag Manager
 // import { GTMHead } from '@/features/google-tag-manager'
 // Hapus Analytics jika tidak menggunakan Vercel Analytics
@@ -42,24 +43,25 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-     <Head>
-       {/* Hapus GTMHead jika tidak digunakan */}
-       {/* <GTMHead /> */}
-     </Head>
-     <Body>
-       <ClientProviders>
-         {children}
-         <Suspense>
-           {/* Hapus GeneralAnalyticsCollector jika tidak digunakan */}
-           {/* <GeneralAnalyticsCollector /> */}
-           {/* Hapus DashboardSurveyPopover jika tidak digunakan */}
-           {/* <DashboardSurveyPopover /> */}
-           <Toaster />
-         </Suspense>
-       </ClientProviders>
-       {/* Hapus Analytics jika tidak digunakan */}
-       {/* <Analytics /> */}
-     </Body>
-   </html>
+      {/* Hapus sepenuhnya tag <Head> dan konten di dalamnya */}
+      {/* <Head> */}
+        {/* Hapus GTMHead jika tidak digunakan */}
+        {/* <GTMHead /> */}
+      {/* </Head> */}
+      <Body>
+        <ClientProviders>
+          {children}
+          <Suspense>
+            {/* Hapus GeneralAnalyticsCollector jika tidak digunakan */}
+            {/* <GeneralAnalyticsCollector /> */}
+            {/* Hapus DashboardSurveyPopover jika tidak digunakan */}
+            {/* <DashboardSurveyPopover /> */}
+            <Toaster />
+          </Suspense>
+        </ClientProviders>
+        {/* Hapus Analytics jika tidak digunakan */}
+        {/* <Analytics /> */}
+      </Body>
+    </html>
   )
 }
