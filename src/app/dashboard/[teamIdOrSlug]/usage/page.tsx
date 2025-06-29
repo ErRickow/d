@@ -4,7 +4,7 @@ import { resolveTeamIdInServerComponent } from '@/lib/utils/server'
 import { getTeamApiKeys } from '@/server/keys/get-api-keys' // Mengambil API Keys tim
 import { Suspense } from 'react'
 import { Loader } from '@/ui/loader'
-import { UserAccessToken } from '@/features/dashboard/account/user-access-token' // Untuk menampilkan token akses pribadi
+import UserAccessToken from '@/features/dashboard/account/user-access-token' // Untuk menampilkan token akses pribadi
 
 // Komponen untuk menampilkan detail penggunaan dari metadata API key
 async function UsageSummaryContent({ teamId }: { teamId: string }) {
