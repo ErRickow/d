@@ -22,13 +22,13 @@ async function UsageSummaryContent({ teamId }: { teamId: string }) {
  // Hitung total penggunaan dari semua API Key.
  // Asumsi: tier dan usage info ada di metadata setiap API key (dari backend API response).
  // Anda perlu memastikan backend /api/keys mengembalikan struktur ini.
- let totalDailyUsage = 0;
- let totalMonthlyUsage = 0;
- let dailyLimit = 0;
- let monthlyLimit = 0;
- let dailyReset = '';
- let monthlyReset = '';
- let tierName = 'Unknown';
+ const totalDailyUsage = 0;
+ const totalMonthlyUsage = 0;
+ const dailyLimit = 0;
+ const monthlyLimit = 0;
+ const dailyReset = '';
+ const monthlyReset = '';
+ const tierName = 'Unknown';
 
  /*apiKeys.forEach(key => {
    // Sesuaikan path jika struktur respons API Key Anda berbeda.
