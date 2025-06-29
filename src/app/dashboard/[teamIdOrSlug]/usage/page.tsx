@@ -30,7 +30,7 @@ async function UsageSummaryContent({ teamId }: { teamId: string }) {
  let monthlyReset = '';
  let tierName = 'Unknown';
 
- apiKeys.forEach(key => {
+ /*apiKeys.forEach(key => {
    // Sesuaikan path jika struktur respons API Key Anda berbeda.
    // Misal: key.usage.daily.current
    if (key.usage) {
@@ -43,7 +43,7 @@ async function UsageSummaryContent({ teamId }: { teamId: string }) {
        if (!monthlyReset) monthlyReset = key.usage.monthly.reset_date;
        if (tierName === 'Unknown') tierName = key.tier; // Asumsi 'tier' ada di objek key
    }
- });
+ });*/
 
  return (
    <div className="grid gap-4">
