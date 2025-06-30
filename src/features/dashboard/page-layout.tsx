@@ -2,7 +2,7 @@ import { ThemeSwitcher } from '@/ui/theme-switcher'
 import { cn } from '@/lib/utils'
 import { Suspense } from 'react'
 import Frame from '@/ui/frame'
-import { DashboardSurveyPopover } from './navbar/dashboard-survey-popover'
+//import { DashboardSurveyPopover } from './navbar/dashboard-survey-popover'
 import { CatchErrorBoundary } from '@/ui/error'
 import { SidebarTrigger } from '@/ui/primitives/sidebar'
 
@@ -40,7 +40,7 @@ export default async function DashboardPageLayout({
           <Suspense fallback={null}>
             <ThemeSwitcher />
           </Suspense>
-          <DashboardSurveyPopover />
+          {/*<DashboardSurveyPopover />*/}
         </div>
       </div>
 
